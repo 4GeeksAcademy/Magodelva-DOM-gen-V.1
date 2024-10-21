@@ -39,6 +39,6 @@ const domain = unifyDomainItems;  // Ejemplo usando ".com"
 
   // Mostrar el resultado
   
-  document.getElementById('gen-dom').innerText = `${domain}`;
+  console.log(document.getElementById('gen-dom').innerText = `${domain}`);
 });
 
