@@ -1,22 +1,22 @@
 // Recibimos los valores del formulario
 
-document.getElementById('dataEntry').addEventListener('submit', function(event) {
+document.getElementById('data-entry').addEventListener('submit', function(event) {
   event.preventDefault(); // Evita que el formulario se envíe
 
 
 // Formatear el string de entrada
 
 const caseFormat = (element) => { 
-  return element.toLowerCase()
+  return element.toLowerCase().trim()
   };
 
 
 // Obtenemos los valores de los inputs
 
 
-  const input1 = caseFormat(document.getElementById('Primera palabra').value);
-  const input2 = caseFormat(document.getElementById('Segunda palabra').value);
-  const input3 = caseFormat(document.getElementById('Tercera palabra').value);
+  const input1 = caseFormat(document.getElementById('first-word').value);
+  const input2 = caseFormat(document.getElementById('second-word').value);
+  const input3 = caseFormat(document.getElementById('third-word').value);
   const domains = ['.com', '.es', '.io', '.org', '.dev'];
 
 // Constante auxiliar para aleatorizar
