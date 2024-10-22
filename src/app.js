@@ -1,44 +1,37 @@
 // Recibimos los valores del formulario
 
-document.getElementById('data-entry').addEventListener('submit', function(event) {
+document.getElementById('data-entry').addEventListener('submit', function(event)  {
   event.preventDefault(); // Evita que el formulario se envíe
 
 
-// Formatear el string de entrada
+// Formateo del input a minúsculas
 
 const caseFormat = (element) => { 
-  return element.toLowerCase().trim()
+  return element.toLowerCase()
   };
 
+// Recibimos los datos del los inputs y se guardan en arrays
 
-// Obtenemos los valores de los inputs
-
-
-  const input1 = caseFormat(document.getElementById('first-word').value);
-  const input2 = caseFormat(document.getElementById('second-word').value);
-  const input3 = caseFormat(document.getElementById('third-word').value);
+  const inputOne = [caseFormat(document.getElementById('pronouns').value), caseFormat(document.getElementById('pronounsTwo').value), caseFormat(document.getElementById('pronounsThree').value)];
+  const inputTwo = [caseFormat(document.getElementById('elements').value), caseFormat(document.getElementById('elementsTwo').value), caseFormat(document.getElementById('elementsThree').value)];
+  const inputThree = [caseFormat(document.getElementById('adjective').value), caseFormat(document.getElementById('adjectiveTwo').value), caseFormat(document.getElementById('adjectiveThree').value)];
   const domains = ['.com', '.es', '.io', '.org', '.dev'];
 
-// Constante auxiliar para aleatorizar
+// Simplificamos las variables
 
-  const inputsToRandomize = [input1, input2, input3];
+  const pronouns = inputOne;
+  const elements = inputTwo;
+  const adjectives = inputThree;
 
-// Establecemos las constantes randomizadas
+// Hacemos el loop en todos los arrays
 
-const first = Math.floor(Math.random() * 3); // Se añaden 3 iguales para dar 3 valores diferentes
-const second = Math.floor(Math.random() * 3);
-const third = Math.floor(Math.random() * 3);
-const domainRandom = Math.floor(Math.random() * 5);
-
-// 
-
-  // Concatenar los valores aleatorizados para formar el dominio
-const unifyDomainItems =`www.${inputsToRandomize[first]}${inputsToRandomize[second]}${inputsToRandomize[third]}${domains[domainRandom]}`;
-
-const domain = unifyDomainItems;  // Ejemplo usando ".com"
-
-  // Mostrar el resultado
-  
-  console.log(document.getElementById('gen-dom').innerText = `${domain}`);
-});
-
+for(let pronoun of pronouns) {
+  for(let elemento of elements) {
+    for(let adjetivo of adjectives) {
+      for(let domain of domains) {
+        console.log(`www.${pronoun}${elemento}${adjetivo}${domain}`); // Devolvemos los dominios generados en la consola
+      }
+    }
+  }
+}
+})
