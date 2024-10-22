@@ -14,14 +14,14 @@ const caseFormat = (element) => {
 // Obtenemos los valores de los inputs
 
 
-  const input1 = caseFormat(document.getElementById('first-word').value);
-  const input2 = caseFormat(document.getElementById('second-word').value);
-  const input3 = caseFormat(document.getElementById('third-word').value);
+  const firstInput = [caseFormat(document.getElementById('first-word').value)];
+  const secondInput = [caseFormat(document.getElementById('second-word').value)];
+  const thirdInput = [caseFormat(document.getElementById('third-word').value)];
   const domains = ['.com', '.es', '.io', '.org', '.dev'];
 
 // Constante auxiliar para aleatorizar
 
-  const inputsToRandomize = [input1, input2, input3];
+  const inputsToRandomize = [firstInput, secondInput, thirdInput];
 
 // Establecemos las constantes randomizadas
 

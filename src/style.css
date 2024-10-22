@@ -3,8 +3,18 @@ body {
 
     background-image: url(assets/img/bg-main.png);
     background-size: cover;
+    background-repeat: no-repeat;
     font-family: Roboto, sans-serif;
 }
+
+.card-body p {
+
+    font-weight: 200;
+    font-size: 1.5rem;
+
+}
+
+
 .main-cont {
 
     height: 100vh;
@@ -26,7 +36,6 @@ body {
 h1 {
 
     padding-top: 2rem;
-    padding-bottom: 1rem;
     font-size: 4rem;
     color: white;
     font-weight: 100;
