@@ -15,7 +15,7 @@ const caseFormat = (element) => {
   const inputOne = [caseFormat(document.getElementById('pronouns').value), caseFormat(document.getElementById('pronounsTwo').value), caseFormat(document.getElementById('pronounsThree').value)];
   const inputTwo = [caseFormat(document.getElementById('elements').value), caseFormat(document.getElementById('elementsTwo').value), caseFormat(document.getElementById('elementsThree').value)];
   const inputThree = [caseFormat(document.getElementById('adjective').value), caseFormat(document.getElementById('adjectiveTwo').value), caseFormat(document.getElementById('adjectiveThree').value)];
-  const domains = ['.com', '.es', '.io', '.org', '.dev'];
+  const domains = ['.com', '.es', '.io', '.org', '.dev', '.co', '.eu'];
 
 // Simplificamos las variables
 
